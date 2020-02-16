@@ -106,6 +106,10 @@
   <java-symbol type="string" name="app_clipboard_access_denied" />
   <java-symbol type="string" name="app_clipboard_access_granted" />
 
+  <!-- OmniSwitch -->
+  <java-symbol type="anim" name="last_app_in" />
+  <java-symbol type="anim" name="last_app_out" />
+
   <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
   <java-symbol type="string" name="config_oemFastChargerStatusPath" />
 
