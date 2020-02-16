@@ -5658,6 +5658,39 @@ public final class Settings {
         public static final String CLIPBOARD_TOAST_INFO = "clipboard_toast_info";
 
         /**
+         * Recents component
+         * 0 - Quickstep
+         * 1 - AOSP
+         * 2 - OmniSwitch
+         * @hide
+         */
+        public static final String RECENTS_COMPONENT = "recents_component";
+
+        /**
+         * Whether to use icon pack for Recents
+         * @hide
+         */
+        public static final String RECENTS_ICON_PACK = "recents_icon_pack";
+
+        /**
+         * Show clear all recents button
+         * @hide
+         */
+        public static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
+
+        /**
+         * Location of the clear all recents button
+         * @hide
+         */
+        public static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+
+        /**
+         * Whether to enable OmniSwitch as recents implementation.
+         * @hide
+         */
+        public static final String RECENTS_OMNI_SWITCH_ENABLED = "recents_omni_switch";
+
+        /**
          * Whether to show the notification ticker on the status bar
          * @hide
          */
@@ -5890,6 +5923,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(LOCK_TO_APP_ENABLED);
             PRIVATE_SETTINGS.add(EGG_MODE);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
+            PRIVATE_SETTINGS.add(RECENTS_OMNI_SWITCH_ENABLED);
         }
 
         /**

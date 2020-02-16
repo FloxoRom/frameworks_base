@@ -22,6 +22,9 @@ import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.provider.Settings;
 
+import android.os.UserHandle;
+import com.android.internal.util.omni.OmniSwitchConstants;
+
 import com.android.systemui.SystemUI;
 import com.android.systemui.statusbar.CommandQueue;
 
@@ -77,6 +80,11 @@ public class Recents extends SystemUI implements CommandQueue.Callbacks {
             return;
         }
 
+        if (isOmniSwitchRecents()) {
+            OmniSwitchConstants.toggleOmniSwitchRecents(mContext, UserHandle.CURRENT);
+            return;
+        }
+
         mImpl.showRecentApps(triggeredFromAltTab);
     }
 
@@ -85,6 +93,11 @@ public class Recents extends SystemUI implements CommandQueue.Callbacks {
         // Ensure the device has been provisioned before allowing the user to interact with
         // recents
         if (!isUserSetup()) {
+            return;
+        }
+
+        if (isOmniSwitchRecents()) {
+            OmniSwitchConstants.hideOmniSwitchRecents(mContext, UserHandle.CURRENT);
             return;
         }
 
@@ -99,6 +112,11 @@ public class Recents extends SystemUI implements CommandQueue.Callbacks {
             return;
         }
 
+        if (isOmniSwitchRecents()) {
+            OmniSwitchConstants.toggleOmniSwitchRecents(mContext, UserHandle.CURRENT);
+            return;
+        }
+
         mImpl.toggleRecentApps();
     }
 
@@ -110,6 +128,11 @@ public class Recents extends SystemUI implements CommandQueue.Callbacks {
             return;
         }
 
+        if (isOmniSwitchRecents()) {
+            OmniSwitchConstants.preloadOmniSwitchRecents(mContext, UserHandle.CURRENT);
+            return;
+        }
+
         mImpl.preloadRecentApps();
     }
 
@@ -118,6 +141,10 @@ public class Recents extends SystemUI implements CommandQueue.Callbacks {
         // Ensure the device has been provisioned before allowing the user to interact with
         // recents
         if (!isUserSetup()) {
+            return;
+        }
+
+        if (isOmniSwitchRecents()) {
             return;
         }
 
@@ -147,5 +174,11 @@ public class Recents extends SystemUI implements CommandQueue.Callbacks {
     @Override
     public void dump(FileDescriptor fd, PrintWriter pw, String[] args) {
         mImpl.dump(pw);
+    }
+
+    private boolean isOmniSwitchRecents() {
+        return Settings.System.getIntForUser(mContext.getContentResolver(),
+                    Settings.System.RECENTS_OMNI_SWITCH_ENABLED, 0,
+                    UserHandle.USER_CURRENT) == 1;
     }
 }
