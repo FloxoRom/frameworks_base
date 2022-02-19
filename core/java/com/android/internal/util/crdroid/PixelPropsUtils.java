@@ -153,10 +153,7 @@ public class PixelPropsUtils {
         if (packageName == null) {
             return;
         }
-        if (Arrays.asList(packagesToKeep).contains(packageName)) {
-            return;
-        }
-        if (packageName.startsWith("com.google.")
+        if ((packageName.startsWith("com.google.") && !Arrays.asList(packagesToKeep).contains(packageName))
                 || Arrays.asList(extraPackagesToChange).contains(packageName)) {
 
             if (Arrays.asList(packagesToChangePixel6).contains(packageName)) {
