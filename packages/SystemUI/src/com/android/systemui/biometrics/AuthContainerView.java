@@ -596,7 +596,7 @@ public class AuthContainerView extends LinearLayout
         }
     }
 
-    private synchronized void removeWindowIfAttached(boolean sendReason) {
+    private void removeWindowIfAttached(boolean sendReason) {
         if (sendReason) {
             sendPendingCallbackIfNotNull();
         }
@@ -607,12 +607,7 @@ public class AuthContainerView extends LinearLayout
         }
         Log.d(TAG, "Removing container, mSysUiSessionId: " + mConfig.mSysUiSessionId);
         mContainerState = STATE_GONE;
-        try {
-            mWindowManager.removeView(this);
-        } catch (IllegalArgumentException e) {
-            // Looks like the view is already gone??
-            // Whatever, just ignore it then.
-        }
+        mWindowManager.removeView(this);
     }
 
     @VisibleForTesting
