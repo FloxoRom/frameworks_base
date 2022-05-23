@@ -39,8 +39,6 @@ public class AuthBiometricFaceView extends AuthBiometricView {
 
     private static final String TAG = "BiometricPrompt/AuthBiometricFaceView";
 
-    private static final boolean DEBUG = false;
-
     // Delay before dismissing after being authenticated/confirmed.
     private static final int HIDE_DELAY_MS = 500;
 
@@ -70,9 +68,7 @@ public class AuthBiometricFaceView extends AuthBiometricView {
         }
 
         protected void animateIcon(int iconRes, boolean repeat) {
-            if (DEBUG) {
-                Log.d(TAG, "animateIcon, state: " + mState + ", deactivated: " + mDeactivated);
-            }
+            Log.d(TAG, "animateIcon, state: " + mState + ", deactivated: " + mDeactivated);
             if (mDeactivated) {
                 return;
             }
@@ -102,9 +98,7 @@ public class AuthBiometricFaceView extends AuthBiometricView {
         @Override
         public void onAnimationEnd(Drawable drawable) {
             super.onAnimationEnd(drawable);
-            if (DEBUG) {
-                Log.d(TAG, "onAnimationEnd, mState: " + mState + ", deactivated: " + mDeactivated);
-            }
+            Log.d(TAG, "onAnimationEnd, mState: " + mState + ", deactivated: " + mDeactivated);
             if (mDeactivated) {
                 return;
             }
