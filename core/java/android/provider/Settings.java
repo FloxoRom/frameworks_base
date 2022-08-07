@@ -10935,36 +10935,6 @@ public final class Settings {
         public static final String PULSE_SMOOTHING_ENABLED = "pulse_smoothing_enabled";
 
         /**
-         * Face Unlock Method
-         * @hide
-         */
-        public static final String FACE_UNLOCK_METHOD = "face_unlock_method";
-
-        /**
-         * Whether to show privacy indicator for location
-         * @hide
-         */
-        public static final String ENABLE_LOCATION_PRIVACY_INDICATOR = "enable_location_privacy_indicator";
-
-        /**
-         * Whether to show privacy indicator for camera
-         * @hide
-         */
-        public static final String ENABLE_CAMERA_PRIVACY_INDICATOR = "enable_camera_privacy_indicator";
-
-        /**
-         * Whether to show or hide the arrow for back gesture
-         * @hide
-         */
-        public static final String BACK_GESTURE_ARROW = "back_gesture_arrow";
-
-        /**
-         * Whether or not to vibrate when back gesture is used
-         * @hide
-         */
-        public static final String BACK_GESTURE_HAPTIC = "back_gesture_haptic";
-
-        /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
          *
