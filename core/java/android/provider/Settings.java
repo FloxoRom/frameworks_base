@@ -5764,6 +5764,135 @@ public final class Settings {
         public static final String NOTIFICATION_GUTS_KILL_APP_BUTTON =
                 "notification_guts_kill_app_button";
 
+            /**
+         * Enable udfps detection even when screen is off
+         * Default value is 0
+         * @hide
+         */
+        public static final String SCREEN_OFF_UDFPS = "screen_off_udfps";
+
+        /**
+         * Whether to enable Smart Pixels
+         * @hide
+         */
+        public static final String SMART_PIXELS_ENABLE = "smart_pixels_enable";
+
+        /**
+         * Smart Pixels pattern
+         * @hide
+         */
+        public static final String SMART_PIXELS_PATTERN = "smart_pixels_pattern";
+
+        /**
+         * Smart Pixels Shift Timeout
+         * @hide
+         */
+        public static final String SMART_PIXELS_SHIFT_TIMEOUT = "smart_pixels_shift_timeout";
+
+        /**
+         * Whether Smart Pixels should enable on power saver mode
+         * @hide
+         */
+        public static final String SMART_PIXELS_ON_POWER_SAVE = "smart_pixels_on_power_save";
+
+        /**
+         * reTicker Status
+         * @hide
+         */
+        public static final String RETICKER_STATUS = "reticker_status";
+
+        /**
+         * reTicker Colored
+         * @hide
+         */
+        public static final String RETICKER_COLORED = "reticker_colored";
+
+        /**
+         * Should we listen for fingerprints when the screen is off?  Devices
+         * with a rear-mounted sensor want this, but certain devices have
+         * the sensor embedded in the power key and listening all the time
+         * causes a poor experience.
+         * @hide
+         */
+        public static final String FP_WAKE_UNLOCK = "fp_wake_unlock";
+
+        /**
+         * Heads up timeout configuration
+         * @hide
+         */
+        public static final String HEADS_UP_TIMEOUT = "heads_up_timeout";
+
+        /**
+         * Whether to show material Dismiss All Button for notifications
+         * @hide
+         */
+        public static final String NOTIFICATION_MATERIAL_DISMISS = "notification_material_dismiss";
+
+        /**
+         * @hide
+         */
+        public static final String NOTIFICATION_MATERIAL_DISMISS_STYLE = "notification_material_dismiss_style";
+
+        /**
+         * @hide
+         */
+        public static final String NOTIFICATION_MATERIAL_DISMISS_BGSTYLE = "notification_material_dismiss_bgstyle";
+
+        /**
+         * GameSpace: List of added games by user
+         * @hide
+         */
+        @Readable
+        public static final String GAMESPACE_GAME_LIST = "gamespace_game_list";
+
+        /**
+         * GameSpace: Whether fullscreen intent will be suppressed while in game session
+         * @hide
+         */
+        @Readable
+        public static final String GAMESPACE_SUPPRESS_FULLSCREEN_INTENT = "gamespace_suppress_fullscreen_intent";
+
+        /**
+         * Show app volume rows in volume panel
+         * @hide
+         */
+        public static final String SHOW_APP_VOLUME = "show_app_volume";
+
+        /**
+         * @hide
+         */
+        public static final String QS_TRANSPARENCY = "qs_transparency";
+
+        /**
+         * Whether to show data usage in qs footer
+         * @hide
+         */
+        public static final String QS_FOOTER_DATA_USAGE = "qs_footer_data_usage";
+
+        /**
+         * Change quick settings tiles animation style
+         * @hide
+         */
+        public static final String QS_TILE_ANIMATION_STYLE = "qs_tile_animation_style";
+
+        /**
+         * Change quick settings tiles animation duration
+         * @hide
+         */
+        public static final String QS_TILE_ANIMATION_DURATION = "qs_tile_animation_duration";
+
+        /**
+         * Change quick settings tiles interpolator
+         * @hide
+         */
+        public static final String QS_TILE_ANIMATION_INTERPOLATOR = "qs_tile_animation_interpolator";
+
+        /**
+         * Enable/Disable screenshot sound
+         * @hide
+         */
+        public static final String SCREENSHOT_SHUTTER_SOUND = "screenshot_shutter_sound";
+
         /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
@@ -10966,7 +11095,7 @@ public final class Settings {
          *
          * @hide
          */
-        
+
         @Readable
         public static final String[] LEGACY_RESTORE_SETTINGS = {
                 ENABLED_NOTIFICATION_LISTENERS,
