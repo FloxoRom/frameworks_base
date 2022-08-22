@@ -5772,12 +5772,6 @@ public final class Settings {
         public static final String SCREEN_OFF_UDFPS = "screen_off_udfps";
 
         /**
-         * Navbar style
-         * @hide
-         */
-        public static final String NAVBAR_STYLE = "navbar_style";
-
-        /**
          * Whether to enable Smart Pixels
          * @hide
          */
