@@ -5765,10 +5765,11 @@ public final class Settings {
                 "notification_guts_kill_app_button";
 
         /**
-         * Navbar style
+         * Enable udfps detection even when screen is off
+         * Default value is 0
          * @hide
          */
-        public static final String NAVBAR_STYLE = "navbar_style";
+        public static final String SCREEN_OFF_UDFPS = "screen_off_udfps";
 
         /**
          * Whether to enable Smart Pixels
